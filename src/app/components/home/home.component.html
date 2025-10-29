@@ -1,0 +1,361 @@
+<!-- home.component.html -->
+<div style="font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial; color:#0f172a; line-height:1.6;">
+
+  <!-- Top bar -->
+  <div color="primary" style="background:linear-gradient(90deg,#0f172a,#1e293b); color:#f8fafc; padding:0 24px; height:100px; display:flex; align-items:center; justify-content:space-between;">
+    <div style="display:flex; align-items:center; gap:24px;">
+      <span style="font-weight:700; letter-spacing:0.3px;">career-portfolio-onepage</span>
+      <nav style="display:flex; gap:16px; align-items:center;">
+        <a href="#hero" (click)="$event.preventDefault(); scrollTo('hero')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Hero</a>
+        <a href="#about" (click)="$event.preventDefault(); scrollTo('about')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">About</a>
+        <a href="#features" (click)="$event.preventDefault(); scrollTo('features')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Strengths</a>
+        <a href="#experience" (click)="$event.preventDefault(); scrollTo('experience')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Experience</a>
+        <a href="#education" (click)="$event.preventDefault(); scrollTo('education')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Education</a>
+        <a href="#projects" (click)="$event.preventDefault(); scrollTo('projects')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Projects</a>
+        <a href="#why" (click)="$event.preventDefault(); scrollTo('why')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Why Hire Me</a>
+        <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Engagement Options</a>
+        <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Testimonials</a>
+        <a href="#contact" (click)="$event.preventDefault(); scrollTo('contact')" style="text-decoration:none; color:#e2e8f0; font-weight:500;">Contact</a>
+      </nav>
+    </div>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <button mat-stroked-button style="border-color:#94a3b8; color:#e2e8f0;" (click)="scrollTo('hero')">Download Resume (PDF)</button>
+      <button mat-raised-button color="accent" style="background:#22c55e; color:#0b1a0f; font-weight:600;" (click)="scrollTo('contact')">Contact Me</button>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero" style="background:linear-gradient(180deg,#f1f5f9, #ffffff); padding:56px 16px;">
+    <mat-card style="max-width:1100px; margin:0 auto; padding:32px; border-radius:16px; box-shadow:0 10px 30px rgba(2,6,23,0.08);">
+      <div style="display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between;">
+        <div style="flex:1 1 420px;">
+          <h1 style="margin:0 0 12px 0; font-size:40px; line-height:1.2; color:#0f172a;">
+            Career portfolio of a results‑driven professional
+          </h1>
+          <p style="margin:0 0 16px 0; font-size:16px; color:#334155;">
+            Experience, education, projects, and the impact I deliver—organized on one page.
+          </p>
+          <ul style="margin:0 0 16px 18px; color:#334155;">
+            <li>Proven track record improving processes and outcomes</li>
+            <li>Comfortable leading cross‑functional initiatives</li>
+            <li>Open to full‑time roles and select contract projects</li>
+          </ul>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a mat-raised-button color="primary" style="background:#0f172a; color:#f8fafc; padding:0 20px; height:44px; border-radius:8px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center;" href="/assets/resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+            <button mat-stroked-button style="height:44px; border-radius:8px; border-color:#cbd5e1; color:#0f172a;" (click)="scrollTo('contact')">
+              Contact Me
+            </button>
+          </div>
+          <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">No sign‑up needed—scroll to explore highlights.</p>
+        </div>
+      </div>
+    </mat-card>
+  </section>
+
+  <!-- About -->
+  <section id="about" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">About</h2>
+      <p style="margin:0 0 16px 0; color:#475569;">I specialize in turning complex problems into simple, measurable wins. My work spans strategy, execution, and continuous improvement—connecting business goals to tangible outcomes.</p>
+      <ul style="margin:0 0 16px 18px; color:#334155;">
+        <li>Blend of analytical rigor and empathetic communication</li>
+        <li>Fluent in working with stakeholders across product, operations, and engineering</li>
+        <li>Known for clear documentation and predictable delivery</li>
+      </ul>
+      <button mat-stroked-button (click)="scrollTo('projects')" style="border-color:#cbd5e1; color:#0f172a;">View Projects</button>
+    </div>
+  </section>
+
+  <!-- Strengths -->
+  <section id="features" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Strengths</h2>
+      <p style="margin:0 0 24px 0; color:#475569;">Detailed outcomes and artifacts are referenced in Projects and the downloadable resume.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#0f172a; margin-bottom:6px;">Outcome‑Oriented</mat-card-title>
+          <mat-card-content style="color:#334155;">I define success with metrics and deliverables, not activity—prioritizing what moves the needle.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#0f172a; margin-bottom:6px;">Cross‑Functional Collaboration</mat-card-title>
+          <mat-card-content style="color:#334155;">I align teams quickly, clarify roles, and keep work unblocked with proactive communication.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#0f172a; margin-bottom:6px;">Process Improvement</mat-card-title>
+          <mat-card-content style="color:#334155;">I identify bottlenecks, design lean workflows, and automate repeatable tasks to save time and cost.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card" style="flex:1 1 240px; min-width:240px; border-radius:12px; padding:20px; border:1px solid #e2e8f0;">
+          <mat-card-title style="font-size:18px; color:#0f172a; margin-bottom:6px;">Ownership & Reliability</mat-card-title>
+          <mat-card-content style="color:#334155;">I set clear expectations, manage risks, and ship on time—earning trust through consistency.</mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Experience</h2>
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <mat-card style="border:1px solid #e2e8f0; border-radius:12px; padding:16px;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Senior Project Lead — BluePeak Labs <span style="font-weight:400; color:#64748b;">(2021–Present)</span></mat-card-title>
+          <mat-card-content>
+            <ul style="margin:8px 0 0 18px; color:#334155;">
+              <li>Led a cross‑functional initiative that reduced onboarding time by 30% through workflow redesign</li>
+              <li>Introduced quarterly OKRs and a lightweight reporting cadence, improving on‑time delivery by 18%</li>
+              <li>Mentored associates and established a playbook for stakeholder updates and risk management</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+        <mat-card style="border:1px solid #e2e8f0; border-radius:12px; padding:16px;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Product Analyst — NorthRiver Systems <span style="font-weight:400; color:#64748b;">(2018–2021)</span></mat-card-title>
+          <mat-card-content>
+            <ul style="margin:8px 0 0 18px; color:#334155;">
+              <li>Mapped customer journeys and prioritized a backlog that boosted feature adoption by 22%</li>
+              <li>Built dashboards to track activation, retention, and NPS; informed roadmap trade‑offs</li>
+              <li>Facilitated user interviews and converted insights into actionable requirements</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+        <mat-card style="border:1px solid #e2e8f0; border-radius:12px; padding:16px;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Operations Coordinator — Cityline Partners <span style="font-weight:400; color:#64748b;">(2015–2018)</span></mat-card-title>
+          <mat-card-content>
+            <ul style="margin:8px 0 0 18px; color:#334155;">
+              <li>Consolidated vendor processes, cutting recurring costs by 12%</li>
+              <li>Standardized documentation and handoffs, reducing cycle time across teams</li>
+              <li>Supported monthly business reviews with data‑driven summaries and recommendations</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Education</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">B.S. in Business Analytics</mat-card-title>
+          <mat-card-subtitle style="color:#64748b;">Northwest University · 2015</mat-card-subtitle>
+          <mat-card-content>
+            <ul style="margin:8px 0 0 18px; color:#334155;">
+              <li>Capstone: Forecasting models for operations planning</li>
+              <li>Leadership: Analytics Club coordinator</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Certifications</mat-card-title>
+          <mat-card-content>
+            <ul style="margin:8px 0 0 18px; color:#334155;">
+              <li>Lean Six Sigma Green Belt</li>
+              <li>Product Analytics (Certificate)</li>
+              <li>Agile Scrum Foundation</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Projects</h2>
+      <p style="margin:0 0 16px 0; color:#475569;">Demonstrated scope, role, and measurable results across representative work.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Customer Self‑Service Portal</mat-card-title>
+          <mat-card-subtitle style="color:#64748b;">Role: Project Lead</mat-card-subtitle>
+          <mat-card-content style="color:#334155;">
+            <p style="margin:8px 0;">Coordinated discovery, requirements, and launch for a self‑service portal.</p>
+            <p style="margin:0; font-weight:600; color:#0f172a;">Outcome:</p>
+            <p style="margin:4px 0 0 0;">Reduced support tickets by 28% and improved CSAT by 0.4 points.</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Operations Workflow Automation</mat-card-title>
+          <mat-card-subtitle style="color:#64748b;">Role: Process Owner</mat-card-subtitle>
+          <mat-card-content style="color:#334155;">
+            <p style="margin:8px 0;">Mapped legacy tasks and implemented an automated approval flow.</p>
+            <p style="margin:0; font-weight:600; color:#0f172a;">Outcome:</p>
+            <p style="margin:4px 0 0 0;">Saved ~300 staff hours per quarter; error rate dropped by 35%.</p>
+          </mat-card-content>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">KPI Dashboard Modernization</mat-card-title>
+          <mat-card-subtitle style="color:#64748b;">Role: Analyst</mat-card-subtitle>
+          <mat-card-content style="color:#334155;">
+            <p style="margin:8px 0;">Consolidated siloed reports into a single, role‑based dashboard.</p>
+            <p style="margin:0; font-weight:600; color:#0f172a;">Outcome:</p>
+            <p style="margin:4px 0 0 0;">Cut reporting time from days to hours; improved decision speed for managers.</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div style="margin-top:16px;">
+        <button mat-stroked-button style="border-color:#cbd5e1; color:#0f172a;" (click)="scrollTo('contact')">See full project write‑ups</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Hire Me -->
+  <section id="why" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Why Hire Me</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:2 1 520px; min-width:320px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">How I Work</mat-card-title>
+          <mat-card-content>
+            <ul style="margin:8px 0 0 18px; color:#334155;">
+              <li>I translate goals into plans with clear owners, timelines, and success metrics.</li>
+              <li>I de‑risk delivery by surfacing assumptions early and managing change transparently.</li>
+              <li>I document decisions and share context so teams move faster with fewer surprises.</li>
+              <li>I care about outcomes and relationships—both matter for sustainable success.</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Proof Points</mat-card-title>
+          <mat-card-content>
+            <ul style="margin:8px 0 0 18px; color:#334155;">
+              <li>Cut onboarding time by 30% via process redesign</li>
+              <li>Improved on‑time delivery by 18% with lightweight cadence</li>
+              <li>Reduced support load by 28% through self‑service</li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div style="margin-top:16px;">
+        <button mat-raised-button color="accent" style="background:#22c55e; color:#0b1a0f; font-weight:700;" (click)="scrollTo('contact')">Schedule an intro call</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement Options -->
+  <section id="plans" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Engagement Options</h2>
+      <p style="margin:0 0 24px 0; color:#475569;">Choose the mode that fits your needs—employment, contracting, or advisory.</p>
+
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <!-- Full-Time Role -->
+        <mat-card style="flex:1 1 300px; min-width:280px; border:1px solid #e2e8f0; border-radius:14px; padding:20px; background:#ffffff;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Full‑Time Role</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:16px; color:#0f172a;">Open to offers</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#334155;">
+            <li>Onsite, hybrid, or remote</li>
+            <li>Ownership of projects or programs</li>
+            <li>Immediate impact with long‑term growth</li>
+          </ul>
+          <button mat-stroked-button style="width:100%; border-color:#cbd5e1; color:#0f172a; height:42px;" (click)="scrollTo('contact')">Request Resume + References</button>
+        </mat-card>
+
+        <!-- Contract Project (Featured) -->
+        <mat-card style="flex:1 1 300px; min-width:280px; border:2px solid #0f172a; border-radius:16px; padding:22px; background:#0f172a; color:#f8fafc; transform:translateY(-4px); box-shadow:0 12px 30px rgba(2,6,23,0.15);">
+          <mat-card-title style="font-size:18px; color:#f8fafc;">Contract Project</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:16px; color:#f8fafc;">Hourly or fixed scope</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#e2e8f0;">
+            <li>Clear milestones and deliverables</li>
+            <li>Weekly updates, risk tracking, and demos</li>
+            <li>Ideal for process, analytics, or rollout work</li>
+          </ul>
+          <button mat-raised-button color="accent" style="width:100%; height:44px; background:#22c55e; color:#0b1a0f; font-weight:700;" (click)="scrollTo('contact')">Propose a Project</button>
+        </mat-card>
+
+        <!-- Advisory / Part-Time -->
+        <mat-card style="flex:1 1 300px; min-width:280px; border:1px solid #e2e8f0; border-radius:14px; padding:20px; background:#ffffff;">
+          <mat-card-title style="font-size:18px; color:#0f172a;">Advisory / Part‑Time</mat-card-title>
+          <div style="margin:6px 0 14px 0; font-size:16px; color:#0f172a;">Monthly retainer</div>
+          <ul style="padding-left:18px; margin:0 0 16px 0; color:#334155;">
+            <li>Standing office hours and async reviews</li>
+            <li>Playbooks, audits, and roadmap feedback</li>
+            <li>Flexible to your team's cadence</li>
+          </ul>
+          <button mat-stroked-button style="width:100%; border-color:#cbd5e1; color:#0f172a; height:42px;" (click)="scrollTo('contact')">Start a Conversation</button>
+        </mat-card>
+      </div>
+      <p style="margin-top:12px; color:#64748b; font-size:12px;">'Plans' represent engagement modes (employment, contracting, advisory) rather than pricing tiers.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" style="padding:48px 16px; background:#ffffff;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Testimonials</h2>
+      <p style="margin:0 0 24px 0; color:#475569;">Third‑party validation of reliability and results.</p>
+
+      <div style="display:flex; flex-wrap:wrap; gap:16px;">
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#0f172a; font-weight:600;">Ava Martinez</p>
+          <p style="margin:0 0 8px 0; color:#64748b; font-size:13px;">Engineering Manager, BluePeak Labs</p>
+          <p style="margin:0; color:#334155;">“Consistently turned ambiguity into action and delivered ahead of schedule.”</p>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#0f172a; font-weight:600;">Liam Chen</p>
+          <p style="margin:0 0 8px 0; color:#64748b; font-size:13px;">Director of Operations, NorthRiver Systems</p>
+          <p style="margin:0; color:#334155;">“Streamlined our workflows and cut cycle time without disrupting the team.”</p>
+        </mat-card>
+        <mat-card style="flex:1 1 320px; min-width:280px; border:1px solid #e2e8f0; border-radius:12px; padding:18px;">
+          <p style="margin:0 0 4px 0; color:#0f172a; font-weight:600;">Sophia Patel</p>
+          <p style="margin:0 0 8px 0; color:#64748b; font-size:13px;">Product Lead, Cityline Partners</p>
+          <p style="margin:0; color:#334155;">“Clear communicator with a sharp eye for impact—made complex work feel simple.”</p>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" style="padding:48px 16px; background:#f8fafc;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <h2 style="margin:0 0 8px 0; font-size:28px; color:#0f172a;">Contact</h2>
+      <p style="margin:0 0 8px 0; color:#0f172a; font-weight:600;">Let's connect</p>
+      <p style="margin:0 0 16px 0; color:#475569;">Share your goals and timeline—I'll reply within one business day.</p>
+      <ul style="margin:0 0 16px 18px; color:#334155;">
+        <li>Intro call (15 minutes) to align on fit</li>
+        <li>Email summary of your needs and constraints</li>
+        <li>Portfolio or role description attachments welcome</li>
+      </ul>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a mat-raised-button color="primary" style="background:#0f172a; color:#f8fafc; padding:0 20px; height:44px; border-radius:8px; font-weight:600; text-decoration:none; display:inline-flex; align-items:center;" href="mailto:hello@example.com">Open Contact Form</a>
+        <button mat-stroked-button style="height:44px; border-radius:8px; border-color:#cbd5e1; color:#0f172a;" (click)="scrollTo('hero')">Schedule an Intro Call</button>
+      </div>
+      <p style="margin:12px 0 0 0; font-size:12px; color:#64748b;">I respect your time—no spam, ever.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#0f172a; color:#e2e8f0;">
+    <div style="max-width:1100px; margin:0 auto; padding:28px 16px; display:flex; flex-wrap:wrap; gap:24px; align-items:flex-start; justify-content:space-between;">
+      <div style="min-width:220px;">
+        <div style="font-weight:700; margin-bottom:6px;">career-portfolio-onepage</div>
+        <div style="font-size:13px; color:#94a3b8;">This portfolio highlights a track record of turning goals into measurable outcomes. If you value clear plans, honest communication, and reliable delivery, let's talk.</div>
+      </div>
+      <div style="display:flex; gap:32px; flex-wrap:wrap;">
+        <div>
+          <div style="font-weight:600; margin-bottom:8px; color:#f1f5f9;">Product</div>
+          <a href="#about" (click)="$event.preventDefault(); scrollTo('about')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">About</a>
+          <a href="#experience" (click)="$event.preventDefault(); scrollTo('experience')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Experience</a>
+          <a href="#projects" (click)="$event.preventDefault(); scrollTo('projects')" style="display:block; text-decoration:none; color:#cbd5e1;">Projects</a>
+        </div>
+        <div>
+          <div style="font-weight:600; margin-bottom:8px; color:#f1f5f9;">Company</div>
+          <a href="#why" (click)="$event.preventDefault(); scrollTo('why')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Why Hire Me</a>
+          <a href="#plans" (click)="$event.preventDefault(); scrollTo('plans')" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Engagement Options</a>
+          <a href="#contact" (click)="$event.preventDefault(); scrollTo('contact')" style="display:block; text-decoration:none; color:#cbd5e1;">Contact</a>
+        </div>
+        <div>
+          <div style="font-weight:600; margin-bottom:8px; color:#f1f5f9;">Legal</div>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1; margin-bottom:6px;">Privacy</a>
+          <a href="#" style="display:block; text-decoration:none; color:#cbd5e1;">Terms</a>
+        </div>
+      </div>
+    </div>
+    <mat-divider style="border-top-color:#1f2937;"></mat-divider>
+    <div style="max-width:1100px; margin:0 auto; padding:14px 16px; font-size:12px; color:#94a3b8;">
+      © 2025 career-portfolio-onepage. All rights reserved.
+    </div>
+  </footer>
+
+</div>
